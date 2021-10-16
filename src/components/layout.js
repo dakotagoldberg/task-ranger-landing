@@ -6,8 +6,11 @@ import {
   navLinks,
   navLinkItem,
   navLinkText,
-  siteTitle,
+  footerText,
+  navBar,
+  logotype,
 } from './layout.module.css'
+import { StaticImage } from 'gatsby-plugin-image'
 const Layout = ({ pageTitle, children }) => {
 
   const data = useStaticQuery(graphql`
@@ -22,31 +25,34 @@ const Layout = ({ pageTitle, children }) => {
 
   return (
     <div className={container}>
-      <title>{pageTitle} | {data.site.siteMetadata.title}</title>
       {/* <header className={siteTitle}>{data.site.siteMetadata.title}</header> */}
-      {/* <nav>
+      <nav className={navBar}>
+      <Link to="/">
+        <StaticImage className={logotype} src='../images/logotype.png'/>
+      </Link>
         <ul className={navLinks}>
           <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
+            <Link to="/" className={navLinkText} style={{ color: 'inherit', textDecoration: 'inherit'}}>
               Home
             </Link>
           </li>
-          <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
+          {/* <li className={navLinkItem}>
+            <Link to="/about" className={navLinkText} style={{ color: 'inherit', textDecoration: 'inherit'}}>
               About
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/blog" className={navLinkText}>
+            <Link to="/blog" className={navLinkText} style={{ color: 'inherit', textDecoration: 'inherit'}}>
               Blog
             </Link>
-          </li>
+          </li> */}
         </ul>
-      </nav> */}
+      </nav>
       <main>
         {/* <h1 className={heading}>{pageTitle}</h1> */}
         {children}
       </main>
+      <div className={footerText}>© TaskRanger 2021</div>
     </div>
   )
 }

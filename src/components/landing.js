@@ -4,6 +4,7 @@ import {
     mainInfoContainer,
     mainInfoTextContainer,
     mainInfoImage,
+    comingSoonButton,
 } from './landing.module.css'
 import { StaticImage } from 'gatsby-plugin-image'
 
@@ -12,9 +13,11 @@ const Landing = ({ pageTitle, children }) => {
     <div className={container}>
         <div className={mainInfoContainer}>
             <div className={mainInfoTextContainer}>
-                <h1>Make your daily to-do list more exciting.</h1>
+                <h1>Make your daily to-do list more <span>exciting.</span></h1>
                 <p>TaskRanger is your simple, gamified, national-park-themed to-do list app.</p>
-                <a>Coming soon</a>
+                <div className={comingSoonButton}>
+                    Coming Soon
+                </div>
             </div>
             <StaticImage
                 className={mainInfoImage}
@@ -23,7 +26,7 @@ const Landing = ({ pageTitle, children }) => {
             />
         </div>
         
-        <br/>
+        {/* <br/>
         <h1>What is TaskRanger?</h1>
         <p>This is some information about TaskRanger and why it exists.</p>
         <br/>
@@ -47,7 +50,7 @@ const Landing = ({ pageTitle, children }) => {
         </table>
         <br/>
         <h1>Download Now</h1>
-        <a>Coming Soon</a>
+        <a>Coming Soon</a> */}
     </div>
   )
 }
