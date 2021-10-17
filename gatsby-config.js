@@ -5,7 +5,14 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        defaults: {
+          placeholder: 'transparent'
+        }
+      }
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

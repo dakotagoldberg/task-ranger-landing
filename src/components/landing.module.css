@@ -29,6 +29,13 @@
     text-underline-offset: -30px;
     text-underline-position:under;
     text-decoration-skip-ink: none;
+    -webkit-text-decoration: underline;
+    -webkit-text-decoration-color: #FFC01D;
+    -webkit-text-decoration-thickness: 14px;
+    -webkit-text-underline-offset: -30px;
+    -webkit-text-underline-position:under;
+    -webkit-text-decoration-skip-ink: none;
+    
 }
 .mainInfoTextContainer p {
     font-size: 20px;
@@ -87,12 +94,10 @@
         width: 80vw;
     }
     .mainInfoTextContainer h1 span {
-        text-decoration: underline;
-        text-decoration-color: #FFC01D;
         text-decoration-thickness: 12px;
         text-underline-offset: -25px;
-        text-underline-position:under;
-        text-decoration-skip-ink: none;
+        -webkit-text-decoration-thickness: 12px;
+        -webkit-text-underline-offset: -25px;
     }
     .mainInfoTextContainer p {
         font-size: 5vw;
