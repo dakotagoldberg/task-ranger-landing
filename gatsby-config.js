@@ -9,7 +9,7 @@ module.exports = {
       resolve: "gatsby-plugin-sharp",
       options: {
         defaults: {
-          placeholder: 'transparent'
+          placeholder: 'none'
         }
       }
     },
