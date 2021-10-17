@@ -8,7 +8,6 @@ body {
     flex-direction: column; */
     font-family: 'DM Sans', sans-serif;
     color: #3A2C18;
-    padding-bottom: 20px;
 }
 .navBar {
   display: flex;
@@ -38,6 +37,7 @@ body {
 .footerText {
   text-align: center;
   font-weight: 500;
+  padding: 20px 0;
 }
 
 @media only screen and (max-width: 600px) {

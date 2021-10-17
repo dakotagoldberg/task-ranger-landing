@@ -11,7 +11,7 @@ import {
   footerText,
   navBar,
   logotype,
-} from './layout.module.css'
+} from './styles/layout.module.css'
 import favicon from '../images/favicon.png'
 
 const Layout = ({ pageTitle, children }) => {
